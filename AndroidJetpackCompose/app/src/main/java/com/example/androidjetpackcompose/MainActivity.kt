@@ -1,21 +1,25 @@
 package com.example.androidjetpackcompose
 
+import android.graphics.drawable.Icon
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.text.ClickableText
 import androidx.compose.foundation.text.selection.DisableSelection
 import androidx.compose.foundation.text.selection.SelectionContainer
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
-import androidx.compose.material.TextField
+import androidx.compose.material.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Email
 import androidx.compose.runtime.*
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.semantics.SemanticsProperties.ImeAction
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.example.androidjetpackcompose.ui.theme.AndroidJetpackComposeTheme
 import kotlin.reflect.typeOf
 
@@ -64,14 +68,14 @@ fun SimpleClickableText() {
 }
 @Composable
 fun SimpleFilledTextFieldSample() {
-    var text by remember { mutableStateOf("Hello") }
-
-    TextField(
+    var text by remember { mutableStateOf("") }
+    OutlinedTextField(
         value = text,
-        onValueChange = { text = it },
-        label = { Text("Label") }
+        onValueChange = {text = it},
+        label = { Text(text = "lable")}
     )
 }
+
 
 @Composable
 fun Greeting(name: String) {
