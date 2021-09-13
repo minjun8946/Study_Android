@@ -10,19 +10,14 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object AppModule{
-
-    @Singleton
-    @Provides
-    fun provideApplication(@ApplicationContext app : Context) : HiltApplication{
-        return app as HiltApplication
-    }
+class AppModule{
 
     @Singleton
     @Provides
     fun provideRandomString() : String{
         return "hello hilt"
     }
+
 }
 
 
