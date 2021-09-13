@@ -1,17 +1,21 @@
 package com.example.practicehilt
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+import androidx.activity.viewModels
+import com.example.practicehilt.base.BaseActivity
+import com.example.practicehilt.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity<ActivityMainBinding,MainViewModel>() {
     @Inject
     lateinit var a : String
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        println(a)
+    override val layoutId = R.layout.activity_main
+    override val viewModel: MainViewModel by viewModels()
+
+    override fun init() {
+        viewModel.team()
     }
+
+
 }
