@@ -1,6 +1,6 @@
 package com.example.practicehilt.di
 
-import com.example.practicehilt.ApiService
+import com.example.data.reomte.ApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -43,5 +43,6 @@ object ApiModule {
 
     @Singleton
     @Provides
-    fun provideApiService(retrofit: Retrofit): ApiService = retrofit.create(ApiService::class.java)
+    fun provideApiService(retrofit: Retrofit): ApiService = retrofit.create(
+        ApiService::class.java)
 }
