@@ -1,6 +1,6 @@
-package com.example.practicehilt
+package com.example.data.reomte
 
-import com.example.practicehilt.data.TeamBasicInfoData
+import com.example.data.entity.TeamBasicInfoData
 import io.reactivex.Single
 import retrofit2.http.GET
 
