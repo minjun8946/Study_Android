@@ -1,15 +1,12 @@
 package com.example.practicehilt
 
 import android.annotation.SuppressLint
-import com.example.data.reomte.ApiService
 import com.example.domain.base.Result
 import com.example.domain.entity.TeamBasicInfo
 import com.example.domain.usecase.TeamUseCase
 import com.example.practicehilt.base.BaseViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel
-import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.observers.DisposableSingleObserver
-import io.reactivex.schedulers.Schedulers
 import javax.inject.Inject
 
 @HiltViewModel
