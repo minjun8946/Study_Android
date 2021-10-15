@@ -150,10 +150,10 @@ fun ChatScreen() {
 
 @Composable
 fun SettingsScreen() {
-    
+
     Box(
         modifier = Modifier
-            .fillMaxHeight()
+            .fillMaxSize()
             .width(300.dp)
             .background(Color.Black),
         contentAlignment = Alignment.Center
