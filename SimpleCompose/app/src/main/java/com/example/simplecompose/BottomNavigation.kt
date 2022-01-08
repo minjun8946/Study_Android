@@ -94,7 +94,7 @@ fun BottomNavigationBar(
     val backStackEntry = navController.currentBackStackEntryAsState()
     BottomNavigation(
         modifier = modifier,
-        backgroundColor = Color.Green,
+        backgroundColor = Color.Black,
         elevation = 5.dp
     ) {
         items.forEach { item ->
